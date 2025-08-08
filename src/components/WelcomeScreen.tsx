@@ -64,7 +64,10 @@ export default function WelcomeScreen({ onStart }: WelcomeScreenProps) {
           transition={{ delay: 0.8, duration: 0.5 }}
           className="text-lg text-[#A1A1AA] max-w-2xl"
         >
-          Descubra seu nível de conhecimento com nosso teste interativo. É rápido, intuitivo e projetado para você.
+          Descubra seu nível de conhecimento com nosso teste interativo.
+          <br>
+          </br>
+          É rápido, intuitivo e projetado para você.
         </motion.p>
         
         <motion.div
