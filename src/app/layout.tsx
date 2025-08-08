@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google"; // Carregamos apenas a Poppins aqui
+import { Poppins } from "next/font/google"; 
 import "./globals.css";
 import GradientMeshBackground from "@/components/GradientMeshBackground"; 
 
