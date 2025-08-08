@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
 import { ArrowRight, BarChart, Zap, Clock } from 'lucide-react';
@@ -11,7 +13,7 @@ const titleAnimation: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1, // Animação letra a letra
+      staggerChildren: 0.1,
     },
   },
 };
@@ -34,7 +36,7 @@ export default function WelcomeScreen({ onStart }: WelcomeScreenProps) {
     { icon: <Zap size={24}/>, title: "Resultado Imediato", description: "Veja sua pontuação assim que terminar." },
     { icon: <BarChart size={24}/>, title: "Análise de Níveis", description: "Saiba qual o seu nível de conhecimento." },
     { icon: <Clock size={24}/>, title: "Rápido e Intuitivo", description: "Complete o teste em poucos minutos." },
-  ]
+  ];
 
   return (
     <motion.div
@@ -49,7 +51,7 @@ export default function WelcomeScreen({ onStart }: WelcomeScreenProps) {
           variants={titleAnimation}
           initial="hidden"
           animate="visible"
-          className="font-logo text-6xl md:text-9xl bg-clip-text text-transparent bg-gradient-to-br from-white to-[#A1A1AA]"
+          className="font-logo text-6xl md:text-9xl bg-clip-text text-transparent bg-gradient-to-br from-white to-[#A1A1AA] tracking-wider"
         >
           {logoText.split('').map((letter, index) => (
             <motion.span key={index} variants={wordAnimation} className="inline-block">
@@ -64,10 +66,7 @@ export default function WelcomeScreen({ onStart }: WelcomeScreenProps) {
           transition={{ delay: 0.8, duration: 0.5 }}
           className="text-lg text-[#A1A1AA] max-w-2xl"
         >
-          Descubra seu nível de conhecimento com nosso teste interativo.
-          <br>
-          </br>
-          É rápido, intuitivo e projetado para você.
+          Descubra seu nível de conhecimento com nosso teste interativo. É rápido, intuitivo e projetado para você.
         </motion.p>
         
         <motion.div

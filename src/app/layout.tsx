@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google"; 
+import { Poppins } from "next/font/google"; // Carregamos apenas a Poppins aqui
 import "./globals.css";
 import GradientMeshBackground from "@/components/GradientMeshBackground"; 
 
@@ -21,6 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
+      {/* O body agora só precisa da classe da Poppins */}
       <body className={`${poppins.className} antialiased bg-transparent text-white`}>
         <GradientMeshBackground />
         {children}
