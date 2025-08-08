@@ -21,7 +21,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      {/* O body agora só precisa da classe da Poppins */}
       <body className={`${poppins.className} antialiased bg-transparent text-white`}>
         <GradientMeshBackground />
         {children}

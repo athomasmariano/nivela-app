@@ -3,10 +3,8 @@
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
 import { ArrowRight, BarChart, Zap, Clock } from 'lucide-react';
-// MUDANÇA 1: Importamos a fonte Orbitron AQUI
 import { Orbitron } from 'next/font/google';
 
-// MUDANÇA 2: Configuramos a Orbitron AQUI
 const orbitron = Orbitron({
   subsets: ['latin'],
   weight: ['700'],
@@ -60,7 +58,6 @@ export default function WelcomeScreen({ onStart }: WelcomeScreenProps) {
           variants={titleAnimation}
           initial="hidden"
           animate="visible"
-          // MUDANÇA 3: Aplicamos a CLASSE da Orbitron diretamente aqui
           className={`${orbitron.className} text-6xl md:text-9xl bg-clip-text text-transparent bg-gradient-to-br from-white to-[#A1A1AA] tracking-widest`}
         >
           {logoText.split('').map((letter, index) => (
