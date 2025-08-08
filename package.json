@@ -19,6 +19,7 @@
     "react": "19.1.0",
     "react-countup": "^6.5.3",
     "react-dom": "19.1.0",
+    "react-world-flags": "^1.6.0",
     "three": "^0.179.1",
     "whatamesh": "^0.2.0"
   },

@@ -2,15 +2,18 @@
 
 import { motion, Variants } from 'framer-motion';
 import { allQuestions } from '@/lib/questions';
+// MUDANÇA 1: Importamos a nova biblioteca de bandeiras
+import Flag from 'react-world-flags';
 
 interface LanguageSelectionScreenProps {
   onSelect: (language: keyof typeof allQuestions) => void;
 }
 
+// MUDANÇA 2: Usamos o componente <Flag> com o código do país
 const languages = [
-  { code: 'en', name: 'Inglês', flag: '🇬🇧' },
-  { code: 'es', name: 'Espanhol', flag: '🇪🇸' },
-  { code: 'fr', name: 'Francês', flag: '🇫🇷' },
+  { code: 'en', name: 'Inglês', flag: <Flag code="gb" height="60" /> },
+  { code: 'es', name: 'Espanhol', flag: <Flag code="es" height="60" /> },
+  { code: 'fr', name: 'Francês', flag: <Flag code="fr" height="60" /> },
 ];
 
 const containerVariants: Variants = {
@@ -64,7 +67,8 @@ export default function LanguageSelectionScreen({ onSelect }: LanguageSelectionS
             onClick={() => onSelect(lang.code as keyof typeof allQuestions)}
             className="p-8 bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl cursor-pointer flex flex-col items-center gap-4 transition-colors duration-300"
           >
-            <span className="text-7xl" role="img" aria-label={lang.name}>{lang.flag}</span>
+            {/* MUDANÇA 3: Apenas renderizamos o componente que já está no array */}
+            {lang.flag}
             <h2 className="text-3xl font-bold text-white [text-shadow:0_2px_4px_rgba(0,0,0,0.5)]">{lang.name}</h2>
           </motion.div>
         ))}
