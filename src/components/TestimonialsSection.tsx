@@ -1,5 +1,4 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Star } from 'lucide-react';
 import { useRef } from 'react';
 
 type Testimonial = {

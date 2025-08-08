@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { allQuestions, proficiencyLevels } from '@/lib/questions';
-import { Level } from '@/lib/types';
+import { Level, Question } from '@/lib/types';
 
 import LanguageSelectionScreen from '@/components/LanguageSelectionScreen';
 import LandingPage from '@/components/LandingPage';
@@ -36,8 +36,7 @@ export default function HomePage() {
     setFinalLevel(null);
   };
   
-  // LÓGICA DE CÁLCULO
-  const calculateResults = (answers: string[], questions: any[]) => {
+  const calculateResults = (answers: string[], questions: Question[]) => {
     let correctAnswers = 0;
     
     answers.forEach((answer, index) => {
@@ -48,12 +47,12 @@ export default function HomePage() {
 
     setScore(correctAnswers);
 
-    let determinedLevel: Level = proficiencyLevels[0]; // Nível padrão caso não atinja nenhum.
+    let determinedLevel: Level = proficiencyLevels[0];
     for (let i = proficiencyLevels.length - 1; i >= 0; i--) {
         const level = proficiencyLevels[i];
         if (correctAnswers >= level.minCorrect) {
             determinedLevel = level;
-            break; // Encerra o loop ao encontrar o nível mais alto correspondente.
+            break;
         }
     }
     
