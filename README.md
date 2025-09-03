@@ -1,5 +1,8 @@
 # Nivela - Plataforma de Nivelamento de Idiomas
 
+![Preview do Portfólio](./public/nivela.png)
+
+
 ## 🚀 Sobre o Projeto
 
 **Nivela** é uma plataforma web interativa projetada para avaliar a proficiência de usuários em diferentes idiomas (inglês, espanhol e francês). O projeto foi desenvolvido como um case de estudo para aprofundar conhecimentos em tecnologias de front-end modernas, com foco especial em design de interface, experiência do usuário e animações dinâmicas.
